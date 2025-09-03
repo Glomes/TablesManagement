@@ -19,6 +19,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.clickable
+import androidx.compose.material3.CardDefaults
+import com.example.tablesmanagement.ui.theme.Gray
 
 @Composable
 fun ActionCard(text: String, iconRes: Int,modifier: Modifier = Modifier,  onClick: () -> Unit){
@@ -26,9 +28,10 @@ fun ActionCard(text: String, iconRes: Int,modifier: Modifier = Modifier,  onClic
         modifier = modifier
             .width(156.dp)
             .height(144.dp)
-            .background(Color(0xFFF4F2F2))
+
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors( containerColor = Gray)
 
     ){
         Column(

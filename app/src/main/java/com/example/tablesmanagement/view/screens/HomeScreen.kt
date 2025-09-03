@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ModalBottomSheet
 import com.example.tablesmanagement.view.screens.components.ActionCard
 import com.example.tablesmanagement.view.screens.components.BottomMenu
@@ -26,11 +27,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.navigation.NavController
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(){
+fun HomeScreen(navController: NavController){
     var showBottomSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = false)
     Column(
@@ -40,6 +42,9 @@ fun HomeScreen(){
     ) {
 
         Header()
+        HorizontalDivider(thickness = 2.dp,
+            color = Color(0x0F383737),
+        )
 
         Column(
             modifier = Modifier
@@ -67,9 +72,8 @@ fun HomeScreen(){
 
                 ActionCard(text = "Mapa de atendimento",
                     iconRes = R.drawable.cards,
-                    onClick = { }
+                    onClick = { navController.navigate("Map")}
                     )
-
 
             }
 

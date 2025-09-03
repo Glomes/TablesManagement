@@ -24,7 +24,8 @@ fun Header(modifier: Modifier = Modifier) {
             .fillMaxWidth()
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
+        horizontalArrangement = Arrangement.Center,
+
 
     ) {
         Image(
