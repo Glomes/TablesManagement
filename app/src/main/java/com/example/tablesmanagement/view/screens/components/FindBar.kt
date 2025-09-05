@@ -27,7 +27,6 @@ import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.R
 
 
-
 @Composable
 fun FindBar(modifier: Modifier = Modifier) {
 
@@ -36,10 +35,7 @@ fun FindBar(modifier: Modifier = Modifier) {
             .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center,
-
-
-
-    ) {
+        ) {
         Image(
             painter = painterResource(id = R.drawable.search),
             contentDescription = "Ícone de busca",
@@ -47,30 +43,24 @@ fun FindBar(modifier: Modifier = Modifier) {
         )
         Spacer(Modifier.width(8.dp))
         EnterField()
-
     }
-
 }
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EnterField() {
-    var textoEstado by remember{ mutableStateOf("")}
+    var textoEstado by remember { mutableStateOf("") }
 
     Column {
         OutlinedTextField(
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent,
-                errorBorderColor = Color.Transparent),
+                errorBorderColor = Color.Transparent
+            ),
             value = textoEstado,
-            onValueChange = {novoTexto -> textoEstado = novoTexto},
-            placeholder = {Text("Cliente,mesa,comanda e atendente")},
-
-
+            onValueChange = { novoTexto -> textoEstado = novoTexto },
+            placeholder = { Text("Cliente,mesa,comanda e atendente") },
             )
-
-}}
-
-
+    }
+}

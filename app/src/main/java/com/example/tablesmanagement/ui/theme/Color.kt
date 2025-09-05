@@ -13,4 +13,7 @@ val Pink40 = Color(0xFF7D5260)
 
 val Gray = Color(0x0F383737)
 
-val Neutral = Color(0xFFF4F2F2)
+
+val Greenlight = Color(0xFFB8E5B8)
+val Redlight = Color(0xFFF29DA5)
+val Yellowlight = Color(0xFFF2E0AA)

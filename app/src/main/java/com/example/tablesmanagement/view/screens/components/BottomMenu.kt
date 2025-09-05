@@ -16,14 +16,16 @@ import com.example.tablesmanagement.R
 @Composable
 fun BottomMenu() {
     Column(
-        modifier = Modifier.fillMaxWidth().padding(16.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(text = "Novo pedido", style = MaterialTheme.typography.titleMedium)
         Text(text = "Selecione o tipo de pedido", style = MaterialTheme.typography.bodyMedium)
         Spacer(modifier = Modifier.height(16.dp))
 
-        BottomSheetItem (
+        BottomSheetItem(
             text = "Mesa/Comanda",
             iconRes = R.drawable.table_restaurant,
             onClick = {}
@@ -31,7 +33,7 @@ fun BottomMenu() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        BottomSheetItem (
+        BottomSheetItem(
             text = "Balcão",
             iconRes = R.drawable.shopping_bag_speed,
             onClick = {}

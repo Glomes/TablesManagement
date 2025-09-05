@@ -60,12 +60,12 @@ fun HomeScreen(navController: NavController){
             Row(
                 modifier = Modifier
                     .fillMaxWidth().padding(16.dp),
-                horizontalArrangement = Arrangement.spacedBy(32.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 ActionCard(
                     text = "Novo pedido",
                     iconRes = R.drawable.add,
-                    modifier = Modifier.weight(1f),
+
                     onClick = { showBottomSheet = true}
 
                 )
@@ -74,7 +74,6 @@ fun HomeScreen(navController: NavController){
                     iconRes = R.drawable.cards,
                     onClick = { navController.navigate("Map")}
                     )
-
             }
 
         if (showBottomSheet){
@@ -85,7 +84,6 @@ fun HomeScreen(navController: NavController){
                BottomMenu()
             }
         }
-
         }
 
     }

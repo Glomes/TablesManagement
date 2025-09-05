@@ -17,6 +17,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.layout.Arrangement
+
 @Composable
 fun Header(modifier: Modifier = Modifier) {
     Row(
@@ -25,20 +26,17 @@ fun Header(modifier: Modifier = Modifier) {
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center,
-
-
-    ) {
+        ) {
         Image(
-                    painter = painterResource(id = R.drawable.pigz_logo),
-                    contentDescription = "Logo da Pigz",
-                    modifier = Modifier.size(48.dp)
-                )
+            painter = painterResource(id = R.drawable.pigz_logo),
+            contentDescription = "Logo da Pigz",
+            modifier = Modifier.size(48.dp)
+        )
         Spacer(Modifier.width(8.dp))
         Text(
             text = "Comanda",
             style = MaterialTheme.typography.titleLarge,
             color = Color(0xFFFF5E1A)
         )
-
     }
 }

@@ -25,7 +25,7 @@ fun BottomSheetItem(
 ) {
     Row(
         modifier = Modifier
-                .fillMaxWidth()
+            .fillMaxWidth()
             .background(Color(0x0F383737), shape = RoundedCornerShape(16.dp))
             .padding(vertical = 16.dp, horizontal = 24.dp)
             .clickable(onClick = onClick),
@@ -48,3 +48,4 @@ fun BottomSheetItem(
         )
     }
 }
+
