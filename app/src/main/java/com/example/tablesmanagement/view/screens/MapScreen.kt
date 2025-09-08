@@ -4,11 +4,9 @@ package com.example.tablesmanagement.view.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -25,18 +23,20 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.tablesmanagement.model.CheckPads
 import com.example.tablesmanagement.ui.theme.Gray
 import com.example.tablesmanagement.ui.theme.Orange
 import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
-import com.example.tablesmanagement.view.screens.components.FilterChips
-import com.example.tablesmanagement.view.screens.components.FindBar
-import com.example.tablesmanagement.view.screens.components.TableCardsList
+import com.example.tablesmanagement.view.components.DetailPopUp
+import com.example.tablesmanagement.view.components.FindBar
+import com.example.tablesmanagement.view.components.TableCardsList
 import com.example.tablesmanagement.viewModel.TablesViewModel
 
 
 @Composable
 fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
-
+    var selectedCheckPad by remember { mutableStateOf<CheckPads?>(null)}
+    var showPopUp by remember { mutableStateOf(false)}
     Column(
         modifier = Modifier
             .fillMaxSize(1f)
@@ -81,8 +81,18 @@ fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
                 .padding(16.dp).padding(bottom = 24.dp),
         ) {
 
-            TableCardsList(tablesViewModel)
+            TableCardsList(tablesViewModel) { checkPad ->
+                selectedCheckPad = checkPad
+                showPopUp = true
+            }
 
         }
+        if (showPopUp && selectedCheckPad != null) {
+            DetailPopUp(
+                checkPad = selectedCheckPad!!,
+                onDismiss = { showPopUp = false }
+            )
     }
+
+}
 }

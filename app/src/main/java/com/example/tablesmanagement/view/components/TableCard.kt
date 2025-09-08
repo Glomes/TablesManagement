@@ -1,5 +1,6 @@
-package com.example.tablesmanagement.view.screens.components
+package com.example.tablesmanagement.view.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,7 +36,7 @@ import java.text.NumberFormat
 import java.util.Locale
 
 @Composable
-fun TableCard(checkPad: CheckPads) {
+fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
 
     val cardBackgroundColor = checkPad.activity.toActivityColor()
     val order = checkPad.orderSheets.firstOrNull()
@@ -46,7 +47,8 @@ fun TableCard(checkPad: CheckPads) {
     Card(
         modifier = Modifier
             .width(110.dp)
-            .height(116.dp),
+            .height(116.dp)
+            .clickable{ onCardClick(checkPad)},
         colors = CardDefaults.cardColors(containerColor = cardBackgroundColor),
         shape = RoundedCornerShape(16.dp),
     ) {

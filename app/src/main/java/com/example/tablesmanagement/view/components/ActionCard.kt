@@ -1,4 +1,4 @@
-package com.example.tablesmanagement.view.screens.components
+package com.example.tablesmanagement.view.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

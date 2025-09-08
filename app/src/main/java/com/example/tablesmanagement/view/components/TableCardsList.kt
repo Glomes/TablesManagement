@@ -1,4 +1,4 @@
-package com.example.tablesmanagement.view.screens.components
+package com.example.tablesmanagement.view.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,10 +12,11 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.tablesmanagement.model.CheckPads
 import com.example.tablesmanagement.viewModel.TablesViewModel
 
 @Composable
-fun TableCardsList(viewModel: TablesViewModel) {
+fun TableCardsList(viewModel: TablesViewModel, onCardClick: (CheckPads) -> Unit) {
 
     val checkPadsList = viewModel.checkPadsList.collectAsState()
     val selectedFilter = viewModel.selectedFilter.collectAsState()
@@ -41,7 +42,7 @@ fun TableCardsList(viewModel: TablesViewModel) {
                 contentPadding = PaddingValues(bottom = 64.dp)
             ) {
                 items(checkPadsList.value, key = { it.id }) { checkPad ->
-                    TableCard(checkPad = checkPad)
+                    TableCard(checkPad = checkPad, onCardClick = onCardClick)
                 }
             }
         }
