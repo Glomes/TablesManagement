@@ -35,8 +35,10 @@ import com.example.tablesmanagement.viewModel.TablesViewModel
 
 @Composable
 fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
-    var selectedCheckPad by remember { mutableStateOf<CheckPads?>(null)}
-    var showPopUp by remember { mutableStateOf(false)}
+    var selectedCheckPad by remember { mutableStateOf<CheckPads?>(null) }
+    var showPopUp by remember { mutableStateOf(false) }
+
+
     Column(
         modifier = Modifier
             .fillMaxSize(1f)
@@ -48,21 +50,23 @@ fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
                 .padding(20.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            IconButton(onClick = { navController.popBackStack() }) {
+            IconButton(onClick = {
+                navController.popBackStack("home", inclusive = false)
 
+            }
+            ) {
                 Icon(
                     tint = Orange,
                     painter = painterResource(id = com.example.tablesmanagement.R.drawable.vector),
                     contentDescription = "Voltar",
-                    )
-
+                )
             }
-
 
             Text(
                 text = "Mapa de atendimento",
                 style = MaterialTheme.typography.titleLarge,
                 fontFamily = PoppinsFontFamily,
+
                 fontWeight = FontWeight.Bold
             )
 
@@ -78,7 +82,8 @@ fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
             modifier = Modifier
                 .fillMaxSize()
                 .background(Gray)
-                .padding(16.dp).padding(bottom = 24.dp),
+
+                .padding(bottom = 24.dp),
         ) {
 
             TableCardsList(tablesViewModel) { checkPad ->
@@ -92,7 +97,7 @@ fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
                 checkPad = selectedCheckPad!!,
                 onDismiss = { showPopUp = false }
             )
-    }
+        }
 
-}
+    }
 }

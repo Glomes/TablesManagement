@@ -56,8 +56,17 @@ fun HomeScreen(navController: NavController) {
                 .padding(horizontal = 16.dp)
 
         ) {
-            Text(text = "Lucas Gomes", style = MaterialTheme.typography.titleLarge, fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Bold)
-            Text(text = "Croc Restaurante", fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
+            Text(
+                text = "Lucas Gomes",
+                style = MaterialTheme.typography.titleLarge,
+                fontFamily = PoppinsFontFamily,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = "Croc Restaurante",
+                fontFamily = PoppinsFontFamily,
+                fontWeight = FontWeight.Normal
+            )
 
             Spacer(modifier = Modifier.height(16.dp))
 

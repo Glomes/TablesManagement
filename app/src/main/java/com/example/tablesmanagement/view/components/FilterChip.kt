@@ -38,7 +38,7 @@ fun FilterChips(
                 shape = RoundedCornerShape(20.dp),
                 modifier = Modifier.height(36.dp)
             ) {
-                Text(filter,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
+                Text(filter, fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
             }
         }
     }

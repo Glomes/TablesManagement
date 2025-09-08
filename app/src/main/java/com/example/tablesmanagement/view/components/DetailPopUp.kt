@@ -21,7 +21,7 @@ import androidx.compose.ui.window.Dialog
 import com.example.tablesmanagement.model.CheckPads
 import com.example.tablesmanagement.ui.theme.Orange
 import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
-import com.example.tablesmanagement.view.screens.ui.formatIdleTime
+import com.example.tablesmanagement.view.ui.formatIdleTime
 
 @Composable
 fun DetailPopUp(checkPad: CheckPads, onDismiss: () -> Unit) {
@@ -47,8 +47,8 @@ fun DetailPopUp(checkPad: CheckPads, onDismiss: () -> Unit) {
 
                 Spacer(modifier = Modifier.height(16.dp))
                 checkPad.orderSheets.firstOrNull()?.let { order ->
-                    DetailRow("Cliente:", order.customerName ?: "Sem nome")
-                    DetailRow("Atendente:", order.seller?.name ?: "N/A")
+                    DetailRow("Cliente:", if(order.customerName.isNullOrBlank()) "Não Informado" else order.customerName)
+                    DetailRow("Atendente:", if(order.seller?.name.isNullOrBlank()) "Não Informado" else order.seller.name)
                     DetailRow("Total:", "R$ %.2f".format(order.subTotal / 100.0))
                     DetailRow("Tempo Ocioso:", formatIdleTime(order.idleTime))
                     DetailRow("Numero de Pedidos", checkPad.orderSheets.size.toString())

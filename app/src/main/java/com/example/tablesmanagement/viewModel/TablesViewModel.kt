@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.stateIn
 
-class TablesViewModel(application: Application): AndroidViewModel(application){
+class TablesViewModel(application: Application) : AndroidViewModel(application) {
     private val _allCheckPads = MutableStateFlow<List<CheckPads>>(emptyList())
     private val _selectedFilter = MutableStateFlow("Visão Geral")
 
@@ -57,8 +57,10 @@ class TablesViewModel(application: Application): AndroidViewModel(application){
             filteredByStatus.filter { checkPad ->
                 val order = checkPad.orderSheets.firstOrNull()
                 val matchesTable = checkPad.title.toString().lowercase().contains(lowerCaseQuery)
-                val matchesCustomer = order?.customerName?.lowercase()?.contains(lowerCaseQuery) ?: false
-                val matchesSeller = order?.seller?.name?.lowercase()?.contains(lowerCaseQuery) ?: false
+                val matchesCustomer =
+                    order?.customerName?.lowercase()?.contains(lowerCaseQuery) ?: false
+                val matchesSeller =
+                    order?.seller?.name?.lowercase()?.contains(lowerCaseQuery) ?: false
 
                 matchesTable || matchesCustomer || matchesSeller
             }
@@ -74,7 +76,7 @@ class TablesViewModel(application: Application): AndroidViewModel(application){
         loadTablesData()
     }
 
-    private fun loadTablesData(){
+    private fun loadTablesData() {
         viewModelScope.launch(Dispatchers.IO) {
             _isLoading.value = true
             try {
@@ -88,7 +90,7 @@ class TablesViewModel(application: Application): AndroidViewModel(application){
             } catch (e: Exception) {
                 e.printStackTrace()
                 _allCheckPads.value = emptyList()
-            }finally {
+            } finally {
                 _isLoading.value = false
             }
         }
@@ -97,6 +99,7 @@ class TablesViewModel(application: Application): AndroidViewModel(application){
     fun updateSelectedFilter(filter: String) {
         _selectedFilter.value = filter
     }
+
     fun updateSearchQuery(query: String) {
         _searchQuery.value = query
     }

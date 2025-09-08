@@ -23,8 +23,18 @@ fun BottomMenu() {
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Novo pedido", style = MaterialTheme.typography.titleMedium,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Bold)
-        Text(text = "Selecione o tipo de pedido", style = MaterialTheme.typography.bodyMedium,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
+        Text(
+            text = "Novo pedido",
+            style = MaterialTheme.typography.titleMedium,
+            fontFamily = PoppinsFontFamily,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Selecione o tipo de pedido",
+            style = MaterialTheme.typography.bodyMedium,
+            fontFamily = PoppinsFontFamily,
+            fontWeight = FontWeight.Normal
+        )
         Spacer(modifier = Modifier.height(16.dp))
 
         BottomSheetItem(

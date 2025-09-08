@@ -9,7 +9,7 @@ import androidx.activity.viewModels
 import androidx.compose.runtime.remember
 import androidx.navigation.compose.rememberNavController
 import com.example.tablesmanagement.ui.theme.TablesManagementTheme
-import com.example.tablesmanagement.view.screens.ui.AppNavigator
+import com.example.tablesmanagement.view.ui.AppNavigator
 import com.example.tablesmanagement.viewModel.TablesViewModel
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             TablesManagementTheme() {
-                val viewModel = remember { tablesViewModel}
+                val viewModel = remember { tablesViewModel }
                 val navController = rememberNavController()
 
                 AppNavigator(navController, viewModel)

@@ -40,7 +40,7 @@ fun BottomSheetItem(
             modifier = Modifier.weight(0.1f)
         )
         Text(
-            text = text,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal,
+            text = text, fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal,
             modifier = Modifier.weight(0.8f)
         )
         Icon(

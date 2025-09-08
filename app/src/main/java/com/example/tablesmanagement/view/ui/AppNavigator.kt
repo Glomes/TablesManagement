@@ -1,4 +1,4 @@
-package com.example.tablesmanagement.view.screens.ui
+package com.example.tablesmanagement.view.ui
 
 
 

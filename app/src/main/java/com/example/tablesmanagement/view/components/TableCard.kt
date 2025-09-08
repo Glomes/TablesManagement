@@ -30,8 +30,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.model.CheckPads
 import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
-import com.example.tablesmanagement.view.screens.ui.formatIdleTime
-import com.example.tablesmanagement.view.screens.ui.toActivityColor
+import com.example.tablesmanagement.view.ui.formatIdleTime
+import com.example.tablesmanagement.view.ui.toActivityColor
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -48,7 +48,7 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
         modifier = Modifier
             .width(110.dp)
             .height(116.dp)
-            .clickable{ onCardClick(checkPad)},
+            .clickable { onCardClick(checkPad) },
         colors = CardDefaults.cardColors(containerColor = cardBackgroundColor),
         shape = RoundedCornerShape(16.dp),
     ) {
@@ -133,7 +133,7 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
                     )
                     Spacer(Modifier.width(3.dp))
                     Text(
-                        "${order.seller?.name}",
+                        text = if (order.seller?.name.isNullOrBlank()) "N/A" else order.seller.name,
                         style = MaterialTheme.typography.bodySmall,
                         color = textColor,
                         fontFamily = PoppinsFontFamily,
@@ -143,4 +143,3 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
         }
     }
 }
-
