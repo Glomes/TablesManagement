@@ -83,6 +83,7 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
                         fontFamily = PoppinsFontFamily,
                     )
                 }
+
                 Row(
                     modifier = Modifier, verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
@@ -102,6 +103,7 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
 
                         )
                 }
+
                 Row(
                     modifier = Modifier, verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center
@@ -121,6 +123,7 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
 
                         )
                 }
+
                 Row(
                     modifier = Modifier, verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center

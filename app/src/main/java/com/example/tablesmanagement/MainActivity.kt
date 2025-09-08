@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.tablesmanagement.ui.theme.TablesManagementTheme
 import com.example.tablesmanagement.view.ui.AppNavigator
 import com.example.tablesmanagement.viewModel.TablesViewModel
+import com.example.tablesmanagement.viewModel.TablesViewModelFactory
 
 class MainActivity : ComponentActivity() {
     private val tablesViewModel: TablesViewModel by viewModels()
@@ -19,6 +20,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        val application = application as MyApplication
+        val checkPadDao = application.checkPadDao
+
+        val tablesViewModel: TablesViewModel by viewModels {
+            TablesViewModelFactory(application, checkPadDao)
+        }
+
         setContent {
 
             TablesManagementTheme() {

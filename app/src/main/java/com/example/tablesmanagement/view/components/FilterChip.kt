@@ -29,6 +29,7 @@ fun FilterChips(
     ) {
         items(filters) { filter ->
             val isSelected = filter == selected
+
             Button(
                 onClick = { onSelected(filter) },
                 colors = ButtonDefaults.buttonColors(

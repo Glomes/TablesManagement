@@ -22,6 +22,7 @@ import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 
 @Composable
 fun Header(modifier: Modifier = Modifier) {
+
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -34,7 +35,9 @@ fun Header(modifier: Modifier = Modifier) {
             contentDescription = "Logo da Pigz",
             modifier = Modifier.size(48.dp)
         )
+
         Spacer(Modifier.width(8.dp))
+
         Text(
             text = "Comanda",
             style = MaterialTheme.typography.titleLarge,

@@ -40,7 +40,9 @@ fun FindBar(modifier: Modifier = Modifier, viewModel: TablesViewModel) {
             contentDescription = "Ícone de busca",
             modifier = Modifier.size(24.dp)
         )
+
         Spacer(Modifier.width(8.dp))
+
         EnterField(
             searchQuery = searchQuery,
             onSearchQueryChange = { newQuery ->

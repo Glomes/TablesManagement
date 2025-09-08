@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -21,6 +22,7 @@ fun TableCardsList(viewModel: TablesViewModel, onCardClick: (CheckPads) -> Unit)
     val checkPadsList = viewModel.checkPadsList.collectAsState()
     val selectedFilter = viewModel.selectedFilter.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
+
     Column {
 
 
@@ -31,7 +33,7 @@ fun TableCardsList(viewModel: TablesViewModel, onCardClick: (CheckPads) -> Unit)
             }
         )
         if (isLoading) {
-            LoadingPlaceholder()
+            CircularProgressIndicator()
         } else {
             LazyVerticalGrid(
 

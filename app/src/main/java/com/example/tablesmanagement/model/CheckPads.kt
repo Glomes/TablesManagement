@@ -86,3 +86,4 @@ data class CustomerAccount(
     val currentBalance: Int,
     @SerialName("allowOnCustomerAccount") val allowOnCustomAccount: Int
 )
+
