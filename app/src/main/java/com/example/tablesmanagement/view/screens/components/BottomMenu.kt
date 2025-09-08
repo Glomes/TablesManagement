@@ -11,7 +11,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.ui.text.font.FontWeight
 import com.example.tablesmanagement.R
+import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 
 @Composable
 fun BottomMenu() {
@@ -21,8 +23,8 @@ fun BottomMenu() {
             .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Novo pedido", style = MaterialTheme.typography.titleMedium)
-        Text(text = "Selecione o tipo de pedido", style = MaterialTheme.typography.bodyMedium)
+        Text(text = "Novo pedido", style = MaterialTheme.typography.titleMedium,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Bold)
+        Text(text = "Selecione o tipo de pedido", style = MaterialTheme.typography.bodyMedium,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
         Spacer(modifier = Modifier.height(16.dp))
 
         BottomSheetItem(

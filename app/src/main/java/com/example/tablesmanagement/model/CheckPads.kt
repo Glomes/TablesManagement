@@ -1,5 +1,6 @@
 package com.example.tablesmanagement.model
 
+import androidx.compose.runtime.Immutable
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -11,6 +12,7 @@ data class Tables(
     @SerialName("checkpads") val checkPads: List<CheckPads>
 )
 
+@Immutable
 @Serializable
 data class CheckPads(
     val id: Int,

@@ -17,6 +17,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.ui.text.font.FontWeight
+import com.example.tablesmanagement.ui.theme.Orange
+import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 
 @Composable
 fun Header(modifier: Modifier = Modifier) {
@@ -26,7 +29,7 @@ fun Header(modifier: Modifier = Modifier) {
             .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center,
-        ) {
+    ) {
         Image(
             painter = painterResource(id = R.drawable.pigz_logo),
             contentDescription = "Logo da Pigz",
@@ -36,7 +39,8 @@ fun Header(modifier: Modifier = Modifier) {
         Text(
             text = "Comanda",
             style = MaterialTheme.typography.titleLarge,
-            color = Color(0xFFFF5E1A)
+            color = Orange,
+            fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Bold
         )
     }
 }

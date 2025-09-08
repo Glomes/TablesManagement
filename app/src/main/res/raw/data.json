@@ -55,7 +55,10 @@
           "info": null,
           "user": null,
           "opened": "2025-06-05 11:05:49.000000",
-          "seller": null,
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
           "contact": "",
           "hasPaid": false,
           "customer": null,
@@ -64,7 +67,7 @@
           "hasOrders": true,
           "customerName": "",
           "lastOrderCreated": "2025-06-05 14:05:50.000000",
-          "numberOfCustomers": null
+          "numberOfCustomers": 1
         }
       ]
     },
@@ -444,7 +447,10 @@
           "info": null,
           "user": null,
           "opened": "2025-06-05 10:29:07.000000",
-          "seller": null,
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
           "contact": "",
           "hasPaid": false,
           "customer": null,
@@ -453,14 +459,17 @@
           "hasOrders": true,
           "customerName": "",
           "lastOrderCreated": "2025-06-05 13:29:09.000000",
-          "numberOfCustomers": null
+          "numberOfCustomers": 1
         },
         {
           "id": 2486931,
           "info": null,
           "user": null,
           "opened": "2025-06-05 10:29:39.000000",
-          "seller": null,
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
           "contact": "",
           "hasPaid": false,
           "customer": null,
@@ -469,14 +478,17 @@
           "hasOrders": true,
           "customerName": "",
           "lastOrderCreated": "2025-06-05 13:29:40.000000",
-          "numberOfCustomers": null
+          "numberOfCustomers": 1
         },
         {
           "id": 2486969,
           "info": null,
           "user": null,
           "opened": "2025-06-05 10:58:04.000000",
-          "seller": null,
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
           "contact": "",
           "hasPaid": false,
           "customer": null,
@@ -485,14 +497,17 @@
           "hasOrders": true,
           "customerName": "",
           "lastOrderCreated": "2025-06-05 13:58:05.000000",
-          "numberOfCustomers": null
+          "numberOfCustomers": 1
         },
         {
           "id": 2486971,
           "info": null,
           "user": null,
           "opened": "2025-06-05 10:58:37.000000",
-          "seller": null,
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
           "contact": "",
           "hasPaid": false,
           "customer": null,
@@ -501,14 +516,17 @@
           "hasOrders": true,
           "customerName": "",
           "lastOrderCreated": "2025-06-05 13:58:38.000000",
-          "numberOfCustomers": null
+          "numberOfCustomers": 1
         },
         {
           "id": 2486977,
           "info": null,
           "user": null,
           "opened": "2025-06-05 11:02:49.000000",
-          "seller": null,
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
           "contact": "",
           "hasPaid": false,
           "customer": null,
@@ -517,7 +535,7 @@
           "hasOrders": true,
           "customerName": "",
           "lastOrderCreated": "2025-06-05 14:02:50.000000",
-          "numberOfCustomers": null
+          "numberOfCustomers": 1
         }
       ]
     },
@@ -545,7 +563,10 @@
           "info": null,
           "user": null,
           "opened": "2025-06-05 11:06:19.000000",
-          "seller": null,
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
           "contact": "",
           "hasPaid": false,
           "customer": null,
@@ -554,7 +575,7 @@
           "hasOrders": true,
           "customerName": "",
           "lastOrderCreated": "2025-06-05 14:12:30.000000",
-          "numberOfCustomers": null
+          "numberOfCustomers": 1
         }
       ]
     },
@@ -727,7 +748,7 @@
       "orderSheets": []
     },
     {
-      "id": 10525,
+      "id": 10529,
       "status": true,
       "hash": "nqtmje7",
       "title": "20",

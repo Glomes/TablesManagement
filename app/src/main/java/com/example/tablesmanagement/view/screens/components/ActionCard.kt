@@ -19,30 +19,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.ui.theme.Gray
+import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 
 @Composable
 fun ActionCard(text: String, iconRes: Int, modifier: Modifier = Modifier, onClick: () -> Unit) {
     Card(
         modifier = modifier
-            .width(156.dp)
             .height(144.dp)
-
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = Gray)
-
     ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp),
             verticalArrangement = Arrangement.Center
-
         ) {
-
-
             Icon(
                 painter = painterResource(id = iconRes),
                 contentDescription = null,
@@ -50,7 +46,7 @@ fun ActionCard(text: String, iconRes: Int, modifier: Modifier = Modifier, onClic
                 modifier = Modifier.size(30.dp)
             )
             Spacer(Modifier.height(32.dp))
-            Text(text = text, style = MaterialTheme.typography.bodySmall)
+            Text(text = text, style = MaterialTheme.typography.bodySmall,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
         }
     }
 }

@@ -21,23 +21,27 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.tablesmanagement.ui.theme.Gray
+import com.example.tablesmanagement.ui.theme.Orange
+import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 import com.example.tablesmanagement.view.screens.components.FilterChips
 import com.example.tablesmanagement.view.screens.components.FindBar
 import com.example.tablesmanagement.view.screens.components.TableCardsList
+import com.example.tablesmanagement.viewModel.TablesViewModel
 
 
 @Composable
-fun MapScreen(navController: NavController) {
-    var selectedFilter by remember { mutableStateOf("visão Geral") }
+fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
+
     Column(
         modifier = Modifier
             .fillMaxSize(1f)
     ) {
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -47,19 +51,19 @@ fun MapScreen(navController: NavController) {
             IconButton(onClick = { navController.popBackStack() }) {
 
                 Icon(
-                    tint = Color(0xFFFF5E1A),
+                    tint = Orange,
                     painter = painterResource(id = com.example.tablesmanagement.R.drawable.vector),
                     contentDescription = "Voltar",
-
                     )
 
             }
 
-            Spacer(Modifier.width(16.dp))
 
             Text(
                 text = "Mapa de atendimento",
-                style = MaterialTheme.typography.titleLarge
+                style = MaterialTheme.typography.titleLarge,
+                fontFamily = PoppinsFontFamily,
+                fontWeight = FontWeight.Bold
             )
 
         }
@@ -68,20 +72,16 @@ fun MapScreen(navController: NavController) {
             color = Gray,
         )
 
-        FindBar(modifier = Modifier.padding(8.dp))
-
+        FindBar(modifier = Modifier.padding(8.dp), viewModel = tablesViewModel)
 
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .background(Gray)
-                .padding(16.dp),
+                .padding(16.dp).padding(bottom = 24.dp),
         ) {
-            FilterChips(
-                selected = selectedFilter,
-                onSelected = { selectedFilter = it }
-            )
-            TableCardsList()
+
+            TableCardsList(tablesViewModel)
 
         }
     }

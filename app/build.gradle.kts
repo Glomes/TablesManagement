@@ -68,6 +68,7 @@ dependencies {
     implementation(libs.androidx.navigation.dynamic.features.fragment)
     implementation(libs.kotlinx.serialization.json)
     implementation("com.google.android.material:material:1.10.0")
+    implementation("androidx.compose.material:material-icons-extended:1.6.8")
 
 
 }

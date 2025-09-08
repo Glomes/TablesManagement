@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.R
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ModalBottomSheet
@@ -27,12 +28,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.font.FontWeight
 import androidx.navigation.NavController
+import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavController){
+fun HomeScreen(navController: NavController) {
     var showBottomSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = false)
     Column(
@@ -42,7 +45,8 @@ fun HomeScreen(navController: NavController){
     ) {
 
         Header()
-        HorizontalDivider(thickness = 2.dp,
+        HorizontalDivider(
+            thickness = 2.dp,
             color = Color(0x0F383737),
         )
 
@@ -50,41 +54,43 @@ fun HomeScreen(navController: NavController){
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(1f)
-                .padding(16.dp)
-        ){
-            Text(text = "Lucas Gomes", style = MaterialTheme.typography.titleLarge)
-            Text(text = "Croc Restaurante")
+                .padding(horizontal = 16.dp)
+
+        ) {
+            Text(text = "Lucas Gomes", style = MaterialTheme.typography.titleLarge, fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Bold)
+            Text(text = "Croc Restaurante", fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
 
             Spacer(modifier = Modifier.height(16.dp))
 
             Row(
                 modifier = Modifier
-                    .fillMaxWidth().padding(16.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 ActionCard(
                     text = "Novo pedido",
                     iconRes = R.drawable.add,
-
-                    onClick = { showBottomSheet = true}
+                    onClick = { showBottomSheet = true },
+                    modifier = Modifier.weight(1f)
 
                 )
 
-                ActionCard(text = "Mapa de atendimento",
+                ActionCard(
+                    text = "Mapa de atendimento",
                     iconRes = R.drawable.cards,
-                    onClick = { navController.navigate("Map")}
-                    )
+                    onClick = { navController.navigate("map") },
+                    modifier = Modifier.weight(1f)
+                )
             }
 
-        if (showBottomSheet){
-            ModalBottomSheet(
-                sheetState = sheetState,
-                onDismissRequest = { showBottomSheet = false}
-            ) {
-               BottomMenu()
+            if (showBottomSheet) {
+                ModalBottomSheet(
+                    sheetState = sheetState,
+                    onDismissRequest = { showBottomSheet = false }
+                ) {
+                    BottomMenu()
+                }
             }
         }
-        }
-
     }
 }

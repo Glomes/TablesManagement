@@ -14,8 +14,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.R
+import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 
 @Composable
 fun BottomSheetItem(
@@ -38,7 +40,7 @@ fun BottomSheetItem(
             modifier = Modifier.weight(0.1f)
         )
         Text(
-            text = text,
+            text = text,fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal,
             modifier = Modifier.weight(0.8f)
         )
         Icon(
