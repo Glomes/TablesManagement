@@ -1,11 +1,12 @@
 package com.example.tablesmanagement.view.components
 
+import android.database.Cursor
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -22,6 +23,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.R
+import com.example.tablesmanagement.ui.theme.Orange
 import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 import com.example.tablesmanagement.viewModel.TablesViewModel
 
@@ -31,9 +33,10 @@ fun FindBar(modifier: Modifier = Modifier, viewModel: TablesViewModel) {
     val searchQuery by viewModel.searchQuery.collectAsState()
     Row(
         modifier = modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .padding(start = 4.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center,
+
     ) {
         Image(
             painter = painterResource(id = R.drawable.search),
@@ -56,15 +59,15 @@ fun FindBar(modifier: Modifier = Modifier, viewModel: TablesViewModel) {
 @Composable
 fun EnterField(searchQuery: String, onSearchQueryChange: (String) -> Unit) {
 
-
     Column {
         OutlinedTextField(
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent,
                 errorBorderColor = Color.Transparent,
-
+                cursorColor = Orange
                 ),
+
             value = searchQuery,
             onValueChange = { novoTexto -> onSearchQueryChange(novoTexto) },
             placeholder = {
@@ -74,7 +77,8 @@ fun EnterField(searchQuery: String, onSearchQueryChange: (String) -> Unit) {
                     fontWeight = FontWeight.Normal
                 )
             },
-            singleLine = true
+            singleLine = true,
+
         )
     }
 }

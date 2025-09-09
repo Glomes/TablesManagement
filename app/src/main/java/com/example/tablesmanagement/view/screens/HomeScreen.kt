@@ -31,7 +31,6 @@ import com.example.tablesmanagement.view.components.ActionCard
 import com.example.tablesmanagement.view.components.BottomMenu
 import com.example.tablesmanagement.view.components.Header
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavController) {

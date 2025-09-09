@@ -11,6 +11,8 @@ data class CheckPadEntity(
     val hash: String,
     val title: Int,
     val hasPdv: Boolean,
+    val customerName: String,
+    val sellerName: String,
     val lastOrderCreated: String? = null,
     val hasOrderSheets: Boolean,
     val hasOrder: Boolean,

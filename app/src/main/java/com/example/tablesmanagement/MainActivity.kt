@@ -14,8 +14,6 @@ import com.example.tablesmanagement.viewModel.TablesViewModel
 import com.example.tablesmanagement.viewModel.TablesViewModelFactory
 
 class MainActivity : ComponentActivity() {
-    private val tablesViewModel: TablesViewModel by viewModels()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

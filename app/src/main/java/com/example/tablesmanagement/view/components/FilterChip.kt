@@ -1,7 +1,6 @@
-package com.example.tablesmanagement.view.components
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -18,28 +17,33 @@ import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
 
 @Composable
 fun FilterChips(
-    selected: String,
-    onSelected: (String) -> Unit
+    selectedFilter: String,
+    onFilterSelected: (String) -> Unit
 ) {
-    val filters = listOf("Visão geral", "Em atendimento", "Ociosas", "Disponíveis", "Sem Pedidos")
+    val filters = listOf("Visão Geral", "Em atendimento", "Ociosas", "Disponíveis", "Sem Pedidos")
 
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+        contentPadding = PaddingValues(horizontal = 8.dp),
+        modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
     ) {
         items(filters) { filter ->
-            val isSelected = filter == selected
+            val isSelected = filter.lowercase() == selectedFilter.lowercase()
 
             Button(
-                onClick = { onSelected(filter) },
+                onClick = { onFilterSelected(filter) },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isSelected) Color.Black else Color.White,
                     contentColor = if (isSelected) Color.White else Color.Black
                 ),
-                shape = RoundedCornerShape(20.dp),
-                modifier = Modifier.height(36.dp)
+                shape = RoundedCornerShape(20.dp)
             ) {
-                Text(filter, fontFamily = PoppinsFontFamily, fontWeight = FontWeight.Normal)
+                Text(
+                    text = filter,
+                    fontFamily = PoppinsFontFamily,
+                    fontWeight = FontWeight.Normal,
+                    modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
+                )
             }
         }
     }

@@ -14,6 +14,7 @@ fun String.toActivityColor(): Color = when (this) {
     "waiting" -> Yellowlight
     else -> White
 }
+
 fun formatIdleTime(minutes: Int): String {
     return if (minutes < 60) {
         "$minutes min"

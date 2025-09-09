@@ -1,6 +1,5 @@
 package com.example.tablesmanagement.view.screens
 
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,7 +19,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.tablesmanagement.model.CheckPads
@@ -32,12 +30,10 @@ import com.example.tablesmanagement.view.components.FindBar
 import com.example.tablesmanagement.view.components.TableCardsList
 import com.example.tablesmanagement.viewModel.TablesViewModel
 
-
 @Composable
 fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
     var selectedCheckPad by remember { mutableStateOf<CheckPads?>(null) }
     var showPopUp by remember { mutableStateOf(false) }
-
 
     Column(
         modifier = Modifier
@@ -47,7 +43,7 @@ fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(20.dp),
+                .padding( top = 20.dp, ),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             IconButton(onClick = {
@@ -66,8 +62,6 @@ fun MapScreen(navController: NavController, tablesViewModel: TablesViewModel) {
                 text = "Mapa de atendimento",
                 style = MaterialTheme.typography.titleLarge,
                 fontFamily = PoppinsFontFamily,
-
-                fontWeight = FontWeight.Bold
             )
 
         }

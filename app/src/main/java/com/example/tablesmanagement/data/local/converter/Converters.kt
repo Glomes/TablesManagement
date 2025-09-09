@@ -37,45 +37,4 @@ class Converters {
         return json.decodeFromString(value)
     }
 
-
-    @TypeConverter
-    fun fromSeller(value: Seller?): String? {
-        return value?.let { json.encodeToString(it) }
-    }
-
-    @TypeConverter
-    fun toSeller(value: String?): Seller? {
-        return value?.let { json.decodeFromString(it) }
-    }
-
-    @TypeConverter
-    fun fromUser(value: User?): String? {
-        return value?.let { json.encodeToString(it) }
-    }
-
-    @TypeConverter
-    fun toUser(value: String?): User? {
-        return value?.let { json.decodeFromString(it) }
-    }
-
-    @TypeConverter
-    fun fromCustomer(value: Customer?): String? {
-        return value?.let { json.encodeToString(it) }
-    }
-
-    @TypeConverter
-    fun toCustomer(value: String?): Customer? {
-        return value?.let { json.decodeFromString(it) }
-    }
-
-
-    @TypeConverter
-    fun fromCustomerAccount(value: CustomerAccount?): String? {
-        return value?.let { json.encodeToString(it) }
-    }
-
-    @TypeConverter
-    fun toCustomerAccount(value: String?): CustomerAccount? {
-        return value?.let { json.decodeFromString(it) }
-    }
 }

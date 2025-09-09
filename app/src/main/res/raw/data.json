@@ -1,7 +1,7 @@
 {
-  "total": 18,
-  "withOrderSheet": 15,
-  "withoutOrderSheet": 3,
+  "total": 58,
+  "withOrderSheet": 45,
+  "withoutOrderSheet": 13,
   "checkpads": [
     {
       "id": 82101,
@@ -766,6 +766,1005 @@
         }
       ],
       "orderSheets": []
+    },
+    {
+      "id": 82113,
+      "status": true,
+      "hash": "c7d2e8b",
+      "title": "21",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-03 10:15:20",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 2177,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2478901,
+          "info": "Mesa perto da janela",
+          "user": null,
+          "opened": "2025-06-03 08:15:00.000000",
+          "seller": {
+            "id": 12345,
+            "name": "João"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 2177,
+          "subtotal": 25000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-03 10:15:20.000000",
+          "numberOfCustomers": 2
+        }
+      ]
+    },
+    {
+      "id": 82114,
+      "status": true,
+      "hash": "a1b2c3d",
+      "title": "22",
+      "hasPdv": true,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [
+        {
+          "id": 26894,
+          "model": "Samsung Tab S7",
+          "serial": "3a4b5c6d7e8f9012"
+        }
+      ],
+      "orderSheets": []
+    },
+    {
+      "id": 82115,
+      "status": true,
+      "hash": "e4f5g6h",
+      "title": "23",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:45:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 20,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486990,
+          "info": "Aniversário",
+          "user": {
+            "id": 5678,
+            "name": "Ana"
+          },
+          "opened": "2025-06-05 13:25:00.000000",
+          "seller": {
+            "id": 9012,
+            "name": "Carla"
+          },
+          "contact": "95988776655",
+          "hasPaid": false,
+          "customer": {
+            "id": 71234,
+            "doc": "12345678901",
+            "name": "Maria Silva",
+            "email": "maria.s@example.com",
+            "phone": "95988776655",
+            "status": 1,
+            "birthDate": "1990-01-15",
+            "additionalPhone": null,
+            "customerAccount": {
+              "status": 0,
+              "creditLimit": 0,
+              "currentBalance": 0,
+              "allowOnCustomerAccount": 0
+            }
+          },
+          "idleTime": 20,
+          "subtotal": 45000,
+          "hasOrders": true,
+          "customerName": "Maria Silva",
+          "lastOrderCreated": "2025-06-05 13:45:00.000000",
+          "numberOfCustomers": 3
+        }
+      ]
+    },
+    {
+      "id": 82116,
+      "status": true,
+      "hash": "i9j1k2l",
+      "title": "24",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-04 18:30:15",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 1100,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2483500,
+          "info": "Ponto de atenção: alérgico a camarão",
+          "user": null,
+          "opened": "2025-06-04 14:30:00.000000",
+          "seller": {
+            "id": 10101,
+            "name": "Rafaela"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 1100,
+          "subtotal": 12000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-04 18:30:15.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82117,
+      "status": true,
+      "hash": "m3n4o5p",
+      "title": "25",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:00:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 50,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486950,
+          "info": "",
+          "user": null,
+          "opened": "2025-06-05 12:50:00.000000",
+          "seller": {
+            "id": 20202,
+            "name": "Eduardo"
+          },
+          "contact": "",
+          "hasPaid": true,
+          "customer": null,
+          "idleTime": 50,
+          "subtotal": 7500,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-05 13:00:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82118,
+      "status": true,
+      "hash": "q6r7s8t",
+      "title": "26",
+      "hasPdv": true,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [
+        {
+          "id": 26895,
+          "model": "Galaxy Tab A9",
+          "serial": "b03dbe7d44bc5286"
+        }
+      ],
+      "orderSheets": []
+    },
+    {
+      "id": 82119,
+      "status": true,
+      "hash": "u9v0w1x",
+      "title": "27",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 12:45:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 10,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486985,
+          "info": "",
+          "user": {
+            "id": 3456,
+            "name": "Pedro"
+          },
+          "opened": "2025-06-05 12:35:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "95999887766",
+          "hasPaid": false,
+          "customer": {
+            "id": 71235,
+            "doc": null,
+            "name": "João Pereira",
+            "email": "joao.p@example.com",
+            "phone": "95999887766",
+            "status": 1,
+            "birthDate": null,
+            "additionalPhone": null,
+            "customerAccount": {
+              "status": 1,
+              "creditLimit": 0,
+              "currentBalance": 0,
+              "allowOnCustomerAccount": 1
+            }
+          },
+          "idleTime": 10,
+          "subtotal": 15000,
+          "hasOrders": true,
+          "customerName": "João Pereira",
+          "lastOrderCreated": "2025-06-05 12:45:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82120,
+      "status": true,
+      "hash": "y2z3a4b",
+      "title": "28",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-05-28 11:20:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 12000,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2450000,
+          "info": "Grupo grande",
+          "user": null,
+          "opened": "2025-05-28 09:20:00.000000",
+          "seller": {
+            "id": 16325,
+            "name": "Área Piscina - Designer Team 2"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 12000,
+          "subtotal": 50000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-05-28 11:20:00.000000",
+          "numberOfCustomers": 6
+        }
+      ]
+    },
+    {
+      "id": 82121,
+      "status": true,
+      "hash": "c5d6e7f",
+      "title": "29",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:30:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 3,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486991,
+          "info": "Mesa da varanda",
+          "user": {
+            "id": 4943,
+            "name": "teste Elias"
+          },
+          "opened": "2025-06-05 13:27:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 3,
+          "subtotal": 9000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-05 13:30:00.000000",
+          "numberOfCustomers": 2
+        }
+      ]
+    },
+    {
+      "id": 82122,
+      "status": true,
+      "hash": "g8h9i0j",
+      "title": "30",
+      "hasPdv": false,
+      "lastOrderCreated": null,
+      "hasOrderSheets": true,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "waiting",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486992,
+          "info": "Esperando o pedido",
+          "user": {
+            "id": 4943,
+            "name": "teste Elias"
+          },
+          "opened": "2025-06-05 13:28:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 10,
+          "subtotal": 0,
+          "hasOrders": false,
+          "customerName": "",
+          "lastOrderCreated": null,
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82123,
+      "status": true,
+      "hash": "k1l2m3n",
+      "title": "31",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-04 17:05:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 1200,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2483300,
+          "info": "Cliente frequente",
+          "user": {
+            "id": 828,
+            "name": "Homologação"
+          },
+          "opened": "2025-06-04 13:05:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "95981112233",
+          "hasPaid": false,
+          "customer": {
+            "id": 71236,
+            "doc": "",
+            "name": "Ricardo",
+            "email": "",
+            "phone": "95981112233",
+            "status": 1,
+            "birthDate": null,
+            "additionalPhone": null,
+            "customerAccount": {
+              "status": 1,
+              "creditLimit": 0,
+              "currentBalance": 0,
+              "allowOnCustomerAccount": 1
+            }
+          },
+          "idleTime": 1200,
+          "subtotal": 28000,
+          "hasOrders": true,
+          "customerName": "Ricardo",
+          "lastOrderCreated": "2025-06-04 17:05:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82124,
+      "status": true,
+      "hash": "o4p5q6r",
+      "title": "32",
+      "hasPdv": true,
+      "lastOrderCreated": "2025-06-05 13:20:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 15,
+      "activity": "inactive",
+      "pdvDevices": [
+        {
+          "id": 26896,
+          "model": "Galaxy Tab A9",
+          "serial": "2bc111ab769bce42"
+        }
+      ],
+      "orderSheets": [
+        {
+          "id": 2486988,
+          "info": "Pagamento no Pix",
+          "user": null,
+          "opened": "2025-06-05 13:05:00.000000",
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 15,
+          "subtotal": 18000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-05 13:20:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82125,
+      "status": true,
+      "hash": "s7t8u9v",
+      "title": "33",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-05-31 09:40:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 9000,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2459000,
+          "info": "",
+          "user": null,
+          "opened": "2025-05-31 08:40:00.000000",
+          "seller": {
+            "id": 19747,
+            "name": "Daniela"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 9000,
+          "subtotal": 3200,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-05-31 09:40:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82126,
+      "status": true,
+      "hash": "w0x1y2z",
+      "title": "34",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-02 10:50:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 4500,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2475000,
+          "info": "",
+          "user": null,
+          "opened": "2025-06-02 09:50:00.000000",
+          "seller": {
+            "id": 16324,
+            "name": "Área Piscina - Designer Team 1"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 4500,
+          "subtotal": 5500,
+          "hasOrders": true,
+          "customerName": "Fabio",
+          "lastOrderCreated": "2025-06-02 10:50:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82127,
+      "status": true,
+      "hash": "a3b4c5d",
+      "title": "35",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:10:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 5,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486986,
+          "info": "Mesa do canto",
+          "user": {
+            "id": 828,
+            "name": "Homologação"
+          },
+          "opened": "2025-06-05 13:05:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "95999554433",
+          "hasPaid": false,
+          "customer": {
+            "id": 69207,
+            "doc": "98765432109",
+            "name": "Alice Souza",
+            "email": "alice.s@example.com",
+            "phone": "95999554433",
+            "status": 1,
+            "birthDate": null,
+            "additionalPhone": null,
+            "customerAccount": {
+              "status": 0,
+              "creditLimit": 0,
+              "currentBalance": 0,
+              "allowOnCustomerAccount": 0
+            }
+          },
+          "idleTime": 5,
+          "subtotal": 25000,
+          "hasOrders": true,
+          "customerName": "Alice Souza",
+          "lastOrderCreated": "2025-06-05 13:10:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82128,
+      "status": true,
+      "hash": "e6f7g8h",
+      "title": "36",
+      "hasPdv": false,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [],
+      "orderSheets": []
+    },
+    {
+      "id": 82129,
+      "status": true,
+      "hash": "i9j0k1l",
+      "title": "37",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:50:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 12,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486993,
+          "info": "",
+          "user": {
+            "id": 828,
+            "name": "Homologação"
+          },
+          "opened": "2025-06-05 13:38:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "95999593526",
+          "hasPaid": false,
+          "customer": {
+            "id": 69206,
+            "doc": "89275209200",
+            "name": "Leonardo Seefeld",
+            "email": "seefeld@pigz.com.br",
+            "phone": "95999593526",
+            "status": 1,
+            "birthDate": null,
+            "additionalPhone": null,
+            "customerAccount": {
+              "status": 0,
+              "creditLimit": 0,
+              "currentBalance": 0,
+              "allowOnCustomerAccount": 0
+            }
+          },
+          "idleTime": 12,
+          "subtotal": 12000,
+          "hasOrders": true,
+          "customerName": "Leonardo Seefeld",
+          "lastOrderCreated": "2025-06-05 13:50:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82130,
+      "status": true,
+      "hash": "m2n3o4p",
+      "title": "38",
+      "hasPdv": false,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [],
+      "orderSheets": []
+    },
+    {
+      "id": 82131,
+      "status": true,
+      "hash": "q5r6s7t",
+      "title": "39",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:42:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 10,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486994,
+          "info": "Cliente VIP",
+          "user": null,
+          "opened": "2025-06-05 13:32:00.000000",
+          "seller": {
+            "id": 15000,
+            "name": "Lucas"
+          },
+          "contact": "95988775544",
+          "hasPaid": false,
+          "customer": {
+            "id": 71237,
+            "doc": "11122233344",
+            "name": "Bruno Lima",
+            "email": "bruno.l@example.com",
+            "phone": "95988775544",
+            "status": 1,
+            "birthDate": null,
+            "additionalPhone": null,
+            "customerAccount": {
+              "status": 1,
+              "creditLimit": 0,
+              "currentBalance": 0,
+              "allowOnCustomerAccount": 1
+            }
+          },
+          "idleTime": 10,
+          "subtotal": 40000,
+          "hasOrders": true,
+          "customerName": "Bruno Lima",
+          "lastOrderCreated": "2025-06-05 13:42:00.000000",
+          "numberOfCustomers": 2
+        }
+      ]
+    },
+    {
+      "id": 82132,
+      "status": true,
+      "hash": "u8v9w0x",
+      "title": "40",
+      "hasPdv": false,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [],
+      "orderSheets": []
+    },
+    {
+      "id": 82133,
+      "status": true,
+      "hash": "y1z2a3b",
+      "title": "41",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-04 20:00:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 1000,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2483800,
+          "info": "Pedido via telefone",
+          "user": null,
+          "opened": "2025-06-04 18:00:00.000000",
+          "seller": {
+            "id": 16000,
+            "name": "Julia"
+          },
+          "contact": "",
+          "hasPaid": true,
+          "customer": null,
+          "idleTime": 1000,
+          "subtotal": 10000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-04 20:00:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82134,
+      "status": true,
+      "hash": "c4d5e6f",
+      "title": "42",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 14:00:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 2,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486995,
+          "info": "",
+          "user": {
+            "id": 4943,
+            "name": "teste Elias"
+          },
+          "opened": "2025-06-05 13:58:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 2,
+          "subtotal": 1200,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-05 14:00:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82135,
+      "status": true,
+      "hash": "g7h8i9j",
+      "title": "43",
+      "hasPdv": false,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [],
+      "orderSheets": []
+    },
+    {
+      "id": 82136,
+      "status": true,
+      "hash": "k0l1m2n",
+      "title": "44",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:45:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 15,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486996,
+          "info": "",
+          "user": null,
+          "opened": "2025-06-05 13:30:00.000000",
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 15,
+          "subtotal": 21000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-05 13:45:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82137,
+      "status": true,
+      "hash": "o3p4q5r",
+      "title": "45",
+      "hasPdv": true,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [
+        {
+          "id": 26897,
+          "model": "Galaxy Tab A9",
+          "serial": "3a4b5c6d7e8f9013"
+        }
+      ],
+      "orderSheets": []
+    },
+    {
+      "id": 82138,
+      "status": true,
+      "hash": "s6t7u8v",
+      "title": "46",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-03 15:30:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 2000,
+      "activity": "inactive",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2479500,
+          "info": "Reunião de negócios",
+          "user": {
+            "id": 828,
+            "name": "Homologação"
+          },
+          "opened": "2025-06-03 13:30:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "95999887755",
+          "hasPaid": false,
+          "customer": {
+            "id": 71238,
+            "doc": "99988877766",
+            "name": "Carlos Nogueira",
+            "email": "carlos.n@example.com",
+            "phone": "95999887755",
+            "status": 1,
+            "birthDate": null,
+            "additionalPhone": null,
+            "customerAccount": {
+              "status": 0,
+              "creditLimit": 0,
+              "currentBalance": 0,
+              "allowOnCustomerAccount": 0
+            }
+          },
+          "idleTime": 2000,
+          "subtotal": 55000,
+          "hasOrders": true,
+          "customerName": "Carlos Nogueira",
+          "lastOrderCreated": "2025-06-03 15:30:00.000000",
+          "numberOfCustomers": 5
+        }
+      ]
+    },
+    {
+      "id": 82139,
+      "status": true,
+      "hash": "w9x0y1z",
+      "title": "47",
+      "hasPdv": false,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [],
+      "orderSheets": []
+    },
+    {
+      "id": 82140,
+      "status": true,
+      "hash": "a2b3c4d",
+      "title": "48",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 13:55:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 5,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486997,
+          "info": "",
+          "user": null,
+          "opened": "2025-06-05 13:50:00.000000",
+          "seller": {
+            "id": 0,
+            "name": "Não informado"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 5,
+          "subtotal": 8500,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-05 13:55:00.000000",
+          "numberOfCustomers": 1
+        }
+      ]
+    },
+    {
+      "id": 82141,
+      "status": true,
+      "hash": "e5f6g7h",
+      "title": "49",
+      "hasPdv": false,
+      "lastOrderCreated": null,
+      "hasOrderSheets": false,
+      "hasOrder": false,
+      "idleTime": 0,
+      "activity": "empty",
+      "pdvDevices": [],
+      "orderSheets": []
+    },
+    {
+      "id": 82142,
+      "status": true,
+      "hash": "i8j9k0l",
+      "title": "50",
+      "hasPdv": false,
+      "lastOrderCreated": "2025-06-05 14:00:00",
+      "hasOrderSheets": true,
+      "hasOrder": true,
+      "idleTime": 2,
+      "activity": "active",
+      "pdvDevices": [],
+      "orderSheets": [
+        {
+          "id": 2486998,
+          "info": "Mesa da família",
+          "user": {
+            "id": 4943,
+            "name": "teste Elias"
+          },
+          "opened": "2025-06-05 13:58:00.000000",
+          "seller": {
+            "id": 7096,
+            "name": "ABIOMARA"
+          },
+          "contact": "",
+          "hasPaid": false,
+          "customer": null,
+          "idleTime": 2,
+          "subtotal": 35000,
+          "hasOrders": true,
+          "customerName": "",
+          "lastOrderCreated": "2025-06-05 14:00:00.000000",
+          "numberOfCustomers": 4
+        }
+      ]
     }
   ]
 }

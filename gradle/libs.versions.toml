@@ -13,6 +13,7 @@ composeBom = "2025.08.01"
 material = "1.13.0"
 materialIconsExtended = "1.7.8"
 navigationCompose = "2.9.3"
+pagingRuntimeKtx = "3.2.1"
 roomRuntime = "2.7.2"
 
 [libraries]
@@ -22,6 +23,8 @@ androidx-navigation-compose = { module = "androidx.navigation:navigation-compose
 androidx-navigation-dynamic-features-fragment = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "navigationCompose" }
 androidx-navigation-fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigationCompose" }
 androidx-navigation-ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigationCompose" }
+androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "pagingRuntimeKtx" }
+androidx-paging-runtime-ktx = { module = "androidx.paging:paging-runtime-ktx", version.ref = "pagingRuntimeKtx" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }

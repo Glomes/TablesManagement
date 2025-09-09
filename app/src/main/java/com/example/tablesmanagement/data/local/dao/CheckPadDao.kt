@@ -21,4 +21,26 @@ interface CheckPadDao {
 
     @Query("SELECT COUNT(*) FROM check_pads")
     suspend fun countCheckPads(): Int
+
+    @Query(
+        """
+    SELECT * FROM check_pads 
+    WHERE (:searchQuery = '' 
+        OR title LIKE '%' || :searchQuery || '%'
+        OR customerName LIKE '%' || :searchQuery || '%' 
+        OR sellerName LIKE '%' || :searchQuery || '%'
+    ) 
+    AND (:filterQuery = '' OR LOWER(activity) = :filterQuery)
+    ORDER BY title ASC
+    LIMIT :pageSize OFFSET :offset
+"""
+    )
+    suspend fun getFilteredCheckPads(
+        pageSize: Int,
+        offset: Int,
+        searchQuery: String,
+        filterQuery: String
+    ): List<CheckPadEntity>
 }
+
+
