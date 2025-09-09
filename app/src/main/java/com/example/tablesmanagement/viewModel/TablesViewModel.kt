@@ -46,17 +46,18 @@ class TablesViewModel(application: Application, private val checkPadDao: CheckPa
     val tablesPagingFlow: StateFlow<PagingData<CheckPads>> = _queryAndFilter
         .debounce(300L)
         .flatMapLatest { (query, filter) ->
-
+            val pageSize = 20
             Pager(
                 config = PagingConfig(
-                    pageSize = 20,
+                    pageSize = pageSize,
                     enablePlaceholders = false
                 )
             ) {
                 TablesPagingSource(
                     checkPadDao = checkPadDao,
                     searchQuery = query,
-                    filterQuery = filter
+                    filterQuery = filter,
+                    pageSize =  pageSize
                 )
             }.flow
         }

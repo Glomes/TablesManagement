@@ -26,6 +26,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Black
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.tablesmanagement.model.CheckPads
@@ -36,11 +38,16 @@ import java.text.NumberFormat
 import java.util.Locale
 
 @Composable
-fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
-
+fun TableCard(checkPad: CheckPads,
+              onCardClick: (CheckPads) -> Unit,
+              sellerIcon: ImageVector,
+              timeIcon: ImageVector,
+              moneyIcon: ImageVector,
+              accountIcon: ImageVector
+) {
     val cardBackgroundColor = checkPad.activity.toActivityColor()
     val order = checkPad.orderSheets.firstOrNull()
-    val textColor = Color.Black
+
     val formatter = remember {
         NumberFormat.getCurrencyInstance(Locale.forLanguageTag("pt-BR"))
     }
@@ -60,9 +67,7 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
             Text(
                 text = "${checkPad.title}",
                 style = MaterialTheme.typography.titleLarge,
-                color = textColor,
-                fontFamily = PoppinsFontFamily,
-                fontWeight = FontWeight.Bold
+                color = Black
             )
             if (order != null) {
                 Row(
@@ -71,16 +76,14 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
                 ) {
                     Icon(
                         modifier = Modifier.size(12.dp),
-                        imageVector = Icons.Default.AccountCircle,
-                        contentDescription = "Ícone de cliente",
-                        tint = Color.Black
+                        imageVector = accountIcon,
+                        contentDescription = "Ícone de cliente"
                     )
-                    Spacer(Modifier.width(3.dp))
+
                     Text(
                         "${order.numberOfCustomers}",
                         style = MaterialTheme.typography.bodySmall,
-                        color = textColor,
-                        fontFamily = PoppinsFontFamily,
+
                     )
                 }
 
@@ -90,16 +93,14 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
                 ) {
                     Icon(
                         modifier = Modifier.size(12.dp),
-                        imageVector = Icons.Default.MonetizationOn,
+                        imageVector = moneyIcon,
                         contentDescription = "Ícone de preço",
-                        tint = Color.Black
+
                     )
-                    Spacer(Modifier.width(3.dp))
+
                     Text(
                         text = formatter.format(order.subTotal / 100.0),
                         style = MaterialTheme.typography.bodySmall,
-                        color = textColor,
-                        fontFamily = PoppinsFontFamily,
 
                         )
                 }
@@ -110,16 +111,13 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
                 ) {
                     Icon(
                         modifier = Modifier.size(12.dp),
-                        imageVector = Icons.Default.Schedule,
+                        imageVector = timeIcon,
                         contentDescription = "Ícone do ultimo pedido feito",
-                        tint = Color.Black
                     )
-                    Spacer(Modifier.width(3.dp))
+
                     Text(
                         text = formatIdleTime(order.idleTime),
                         style = MaterialTheme.typography.bodySmall,
-                        color = textColor,
-                        fontFamily = PoppinsFontFamily,
 
                         )
                 }
@@ -130,16 +128,14 @@ fun TableCard(checkPad: CheckPads, onCardClick: (CheckPads) -> Unit) {
                 ) {
                     Icon(
                         modifier = Modifier.size(12.dp),
-                        imageVector = Icons.Default.RoomService,
+                        imageVector = sellerIcon,
                         contentDescription = "Ícone de atendente",
-                        tint = Color.Black
+
                     )
-                    Spacer(Modifier.width(3.dp))
                     Text(
                         text = if (order.seller?.name.isNullOrBlank()) "N/A" else order.seller.name,
                         style = MaterialTheme.typography.bodySmall,
-                        color = textColor,
-                        fontFamily = PoppinsFontFamily,
+
                     )
                 }
             }

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -22,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.tablesmanagement.R
 import com.example.tablesmanagement.ui.theme.Orange
 import com.example.tablesmanagement.ui.theme.PoppinsFontFamily
@@ -66,7 +68,10 @@ fun EnterField(searchQuery: String, onSearchQueryChange: (String) -> Unit) {
                 unfocusedBorderColor = Color.Transparent,
                 errorBorderColor = Color.Transparent,
                 cursorColor = Orange,
-
+                selectionColors = TextSelectionColors(
+                    handleColor = Orange,
+                    backgroundColor = Orange.copy(alpha = 0.4f)
+                )
                 ),
 
             value = searchQuery,
@@ -75,7 +80,9 @@ fun EnterField(searchQuery: String, onSearchQueryChange: (String) -> Unit) {
                 Text(
                     "Cliente,mesa,comanda e atendente",
                     fontFamily = PoppinsFontFamily,
-                    fontWeight = FontWeight.Normal
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 13.sp
+
                 )
             },
             singleLine = true,

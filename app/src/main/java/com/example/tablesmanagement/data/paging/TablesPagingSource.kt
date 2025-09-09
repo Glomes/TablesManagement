@@ -9,13 +9,15 @@ import androidx.paging.PagingState
 class TablesPagingSource(
     private val checkPadDao: CheckPadDao,
     private val searchQuery: String,
-    private val filterQuery: String
+    private val filterQuery: String,
+    private val pageSize: Int
 ) : PagingSource<Int, CheckPadEntity>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, CheckPadEntity> {
         return try {
             val position = params.key ?: 1
-            val pageSize = params.loadSize
+            val offSet = (position -1) * pageSize
+
 
             val dbFilter = when (filterQuery.lowercase()) {
                 "visão geral" -> ""
@@ -27,17 +29,22 @@ class TablesPagingSource(
             }
 
             val data = checkPadDao.getFilteredCheckPads(
-                pageSize = pageSize,
-                offset = (position - 1) * pageSize,
+                pageSize = params.loadSize,
+                offset = offSet,
                 searchQuery = searchQuery,
                 filterQuery = dbFilter
             )
-            Log.d("Paging", "Carregando página $position. Tamanho da página: $pageSize. Itens encontrados: ${data.size}.")
+
+            val nextKey = if (data.isEmpty() || data.size < params.loadSize) {
+                null
+            } else {
+                position + (params.loadSize / pageSize)
+            }
 
             LoadResult.Page(
                 data = data,
                 prevKey = if (position == 1) null else position - 1,
-                nextKey = if (data.isEmpty()) null else position + 1
+                nextKey = nextKey
             )
         } catch (e: Exception) {
             LoadResult.Error(e)

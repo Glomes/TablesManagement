@@ -8,26 +8,39 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.MonetizationOn
+import androidx.compose.material.icons.filled.RoomService
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.paging.LoadState
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.tablesmanagement.model.CheckPads
+import com.example.tablesmanagement.ui.theme.Orange
 import com.example.tablesmanagement.viewModel.TablesViewModel
-import androidx.compose.foundation.lazy.grid.GridItemSpan
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 
 
 @Composable
 fun TableCardsList(viewModel: TablesViewModel, onCardClick: (CheckPads) -> Unit) {
     val checkPads = viewModel.tablesPagingFlow.collectAsLazyPagingItems()
     val selectedFilter by viewModel.selectedFilter.collectAsState()
+
+
+    val sellerIcon = Icons.Default.RoomService
+    val timeIcon = Icons.Default.Schedule
+    val moneyIcon = Icons.Default.MonetizationOn
+    val accountIcon = Icons.Default.AccountCircle
+
 
     FilterChips(
         selectedFilter = selectedFilter,
@@ -51,7 +64,12 @@ fun TableCardsList(viewModel: TablesViewModel, onCardClick: (CheckPads) -> Unit)
             key = { it.id }
         ) { checkPad ->
             checkPad?.let {
-                TableCard(checkPad = it, onCardClick = onCardClick)
+                TableCard(checkPad = it, onCardClick = onCardClick,
+                    sellerIcon = sellerIcon,
+                    timeIcon = timeIcon,
+                    moneyIcon = moneyIcon,
+                    accountIcon = accountIcon
+                    )
             }
         }
 
@@ -64,7 +82,9 @@ fun TableCardsList(viewModel: TablesViewModel, onCardClick: (CheckPads) -> Unit)
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
                     ) {
-                        CircularProgressIndicator()
+                        CircularProgressIndicator(
+                            color = Orange
+                        )
                     }
                 }
             }
