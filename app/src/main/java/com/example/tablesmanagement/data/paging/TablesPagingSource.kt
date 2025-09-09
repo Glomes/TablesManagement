@@ -32,6 +32,7 @@ class TablesPagingSource(
                 searchQuery = searchQuery,
                 filterQuery = dbFilter
             )
+            Log.d("Paging", "Carregando página $position. Tamanho da página: $pageSize. Itens encontrados: ${data.size}.")
 
             LoadResult.Page(
                 data = data,

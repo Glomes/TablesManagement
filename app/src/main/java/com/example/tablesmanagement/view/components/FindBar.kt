@@ -65,7 +65,8 @@ fun EnterField(searchQuery: String, onSearchQueryChange: (String) -> Unit) {
                 focusedBorderColor = Color.Transparent,
                 unfocusedBorderColor = Color.Transparent,
                 errorBorderColor = Color.Transparent,
-                cursorColor = Orange
+                cursorColor = Orange,
+
                 ),
 
             value = searchQuery,
