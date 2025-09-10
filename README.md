@@ -47,6 +47,7 @@ Foi considerado o uso de dependencias como Gson para a manipulação dos dados o
 - ViewModel / Room/ Paging
 - Serialization 
 - Material Icons Extended
+- controle de versão **Git**
 
 ## 📱 Funcionalidades
 - Tela Home
@@ -386,6 +387,7 @@ cd challange-blog-api
 
 - Email: lucasgomesmendes13@gmail.com
 - github: https://github.com/Glomes
+
 
 
 
