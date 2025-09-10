@@ -58,6 +58,7 @@ Foi considerado o uso de dependencias como Gson para a manipulação dos dados o
 - Menu inferior
 
 ## 🍔 Arquitetura
+- modelo **MVVM**
 ```
 app/
 ├── manifests/            # Arquivo AndroidManifest.xml
@@ -387,6 +388,7 @@ cd challange-blog-api
 
 - Email: lucasgomesmendes13@gmail.com
 - github: https://github.com/Glomes
+
 
 
 
