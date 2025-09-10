@@ -35,10 +35,10 @@ Foi considerado o uso de dependencias como Gson para a manipulação dos dados o
 
 ---
 ### Requisitos Funcionais
--Listagem de mesas: Exibição de todas as mesas, indicando seu status (ocupada, livre, reservada, etc.).
--Pesquisa avançada: Busca por nome do cliente, número da mesa e nome do atendente.
--Filtros das mesas: Opções para filtrar mesas por visão geral, em atendimento, ocupadas e ociosas.
--Mostrar informações da mesa e das comandas na listagem: Implementar a visualização rápida de quem está atendendo a mesa, o nome do cliente, quantidade de comandas, há quanto tempo está sem fazer novo pedido, etc.
+- Listagem de mesas: Exibição de todas as mesas, indicando seu status (ocupada, livre, reservada, etc.).
+- Pesquisa avançada: Busca por nome do cliente, número da mesa e nome do atendente.
+- Filtros das mesas: Opções para filtrar mesas por visão geral, em atendimento, ocupadas e ociosas.
+- Mostrar informações da mesa e das comandas na listagem: Implementar a visualização rápida de quem está atendendo a mesa, o nome do cliente, quantidade de comandas, há quanto tempo está sem fazer novo pedido, etc.
 
 ## Tecnologias
 - Kotlin
@@ -386,6 +386,7 @@ cd challange-blog-api
 
 - Email: lucasgomesmendes13@gmail.com
 - github: https://github.com/Glomes
+
 
 
 
