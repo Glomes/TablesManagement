@@ -13,6 +13,33 @@ Uma aplicação para dispositivos moveis para mapear mesas de restaurantes
 ## Sobre
 este projeto é uma solução projetada para otimizar a gestão de mesas, melhorar o atendimento ao cliente e aumentar a eficiência operacional. O app permite que a equipe do restaurante visualize a disposição das mesas, o status de ocupação e o numero de pedidos de cada mesa cadastrada.
 
+---
+
+## Contexto
+Muitos restaurantes por ter um grande fluxo de clientes ou um numero baixo de funcionarios, para atendimento ao cliente, aparece episodios onde uma mesa tenha uma demora ao ser atendido ou até mesmo o envio de um pedido para uma mesa errada. este projeto busca auxiliar os garçons com uma solução baseada no kotlin Android.
+
+---
+
+## Objetivos
+- Desenvolver um App mobile em Kotlin para permitir que os garçons visualizem todo o fluxo de atendimento das mesas
+- Garantir escalabilidade e organização dos dados
+
+---
+
+## Non-Goals
+- não será implementado sistema para adicionar pedidos
+
+---
+## Alternativas
+Foi considerado o uso de dependencias como Gson para a manipulação dos dados ou Kapt para a integração com o room 
+
+---
+### Requisitos Funcionais
+-Listagem de mesas: Exibição de todas as mesas, indicando seu status (ocupada, livre, reservada, etc.).
+-Pesquisa avançada: Busca por nome do cliente, número da mesa e nome do atendente.
+-Filtros das mesas: Opções para filtrar mesas por visão geral, em atendimento, ocupadas e ociosas.
+-Mostrar informações da mesa e das comandas na listagem: Implementar a visualização rápida de quem está atendendo a mesa, o nome do cliente, quantidade de comandas, há quanto tempo está sem fazer novo pedido, etc.
+
 ## Tecnologias
 - Kotlin
 - Jetpack Compose
@@ -98,6 +125,13 @@ cd challange-blog-api
 2. **Aperte para navegar para o mapa de atendimento** 
 3. **utilize os filtros e pesquisas** 
 4. **Click nos Items para mais informações**
+
+## Autor
+**Lucas Gomes**
+
+- Email: lucasgomesmendes13@gmail.com
+- github: https://github.com/Glomes
+
 
 
 
