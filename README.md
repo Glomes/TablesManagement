@@ -6,9 +6,8 @@ Uma aplicação para dispositivos moveis para mapear mesas de restaurantes
 - [Tecnologias](#tecnologias)
 - [Features](#features)
 - [Arquitetura](#arquitetura)
-- [Instalação](#instalacao)
-- [Como usar](#como-usar)
-- [Contribuição](#contribuicao)
+- [Estrutura dos Dados](#Estrutura-dos-Dados)
+- [Como executar](#como-executar)
 
 ## Sobre
 este projeto é uma solução projetada para otimizar a gestão de mesas, melhorar o atendimento ao cliente e aumentar a eficiência operacional. O app permite que a equipe do restaurante visualize a disposição das mesas, o status de ocupação e o numero de pedidos de cada mesa cadastrada.
@@ -49,7 +48,7 @@ Foi considerado o uso de dependencias como Gson para a manipulação dos dados o
 - Material Icons Extended
 - controle de versão **Git**
 
-## 📱 Funcionalidades
+## 📱 Features
 - Tela Home
 - Tela para mapeamento
 - Lista de itens
@@ -388,6 +387,7 @@ cd challange-blog-api
 
 - Email: lucasgomesmendes13@gmail.com
 - github: https://github.com/Glomes
+
 
 
 
