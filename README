@@ -1,0 +1,103 @@
+# 🍽️ TablesManagement
+Uma aplicação para dispositivos moveis para mapear mesas de restaurantes
+
+## Tabela de Conteúdos
+- [Sobre](#sobre)
+- [Tecnologias](#tecnologias)
+- [Features](#features)
+- [Arquitetura](#arquitetura)
+- [Instalação](#instalacao)
+- [Como usar](#como-usar)
+- [Contribuição](#contribuicao)
+
+## Sobre
+este projeto é uma solução projetada para otimizar a gestão de mesas, melhorar o atendimento ao cliente e aumentar a eficiência operacional. O app permite que a equipe do restaurante visualize a disposição das mesas, o status de ocupação e o numero de pedidos de cada mesa cadastrada.
+
+## Tecnologias
+- Kotlin
+- Jetpack Compose
+- Android SDK
+- ViewModel / Room/ Paging
+- Serialization 
+- Material Icons Extended
+
+## 📱 Funcionalidades
+- Tela Home
+- Tela para mapeamento
+- Lista de itens
+- Detalhes de item
+- Filtros e pesquisa
+- Menu inferior
+
+## 🍔 Arquitetura
+```
+app/
+├── manifests/            # Arquivo AndroidManifest.xml
+├── java/
+│   └── com/
+│       └── example/
+│           └── tablesmanagement/ # Pacote raiz da aplicação
+│               ├── data/
+│               │   ├── local/            # Fonte de dados local (banco de dados)
+│               │   │   ├── converter/    # Conversores para tipos de dados
+│               │   │   ├── dao/          # Data Access Objects (DAOs) para acesso ao banco
+│               │   │   └── entity/       # Classes de entidade (tabelas do banco de dados)
+│               │   ├── AppDatabase.kt    # Classe de banco de dados Room
+│               ├── model/                # Classes de modelo (estruturas de dados)
+│               ├── view                  # Camada de UI (interface do usuário)
+│               │   ├── components/       # Componentes de UI reutilizáveis
+│               │   └── screens/          # Telas da aplicação
+│               ├── viewmodel/            # ViewModels (lógica de negócio e estado da UI)
+│               ├── MainActivity.kt       # Ponto de entrada da aplicação
+│               └── MyApplication.kt      # Classe de aplicação customizada
+└── res/                   # Recursos da aplicação (layouts, strings, imagens, etc.)
+    ├── drawable/
+    ├── font/
+    ├── mipmap/
+    ├── raw/
+    └── values/
+```
+
+## 📊 Estrutura dos Dados
+O projeto utiliza uma base de dados Mock e armazena a um banco de dados local Room
+
+### Principais Tabelas
+- CheckPads
+- OrderSheet
+- Seller
+- Customer
+-- os dados principais são armazenados em uma Entidade
+- CheckpadEntity
+
+## Como executar
+
+### pré-requisito
+- Java Development Kit(JDK)
+- Android SDK
+- Gradle
+
+### Instalação Local
+
+1. instale a IDE
+- Android Studio(recomendado) ou outra IDE com suporte:
+-- Linguagem Kotlin
+-- Integração com o Gradle
+-- JetPack Compose
+
+2. **Clone o repositorio**
+
+```bash
+git clone https://github.com/Glomes/TablesManagement.git
+cd challange-blog-api
+```
+
+4. **Build a aplicação**
+
+## 🔄 Fluxo de uso recomendado
+1. **Inicie o App** 
+2. **Aperte para navegar para o mapa de atendimento** 
+3. **utilize os filtros e pesquisas** 
+4. **Click nos Items para mais informações**
+
+
+
