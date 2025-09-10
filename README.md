@@ -44,7 +44,7 @@ Foi considerado o uso de dependencias como Gson para a manipulação dos dados o
 - Kotlin
 - Jetpack Compose
 - Android SDK
-- ViewModel / Room/ Paging
+- ViewModel / Room/ Paging 3
 - Serialization 
 - Material Icons Extended
 - controle de versão **Git**
@@ -387,6 +387,7 @@ cd challange-blog-api
 
 - Email: lucasgomesmendes13@gmail.com
 - github: https://github.com/Glomes
+
 
 
 
