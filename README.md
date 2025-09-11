@@ -24,11 +24,6 @@ Muitos restaurantes por ter um grande fluxo de clientes ou um numero baixo de fu
 - Garantir escalabilidade e organização dos dados
 
 ---
-
-## Non-Goals
-- não será implementado sistema para adicionar pedidos
-
----
 ## Alternativas
 Foi considerado o uso de dependencias como Gson para a manipulação dos dados ou Kapt para a integração com o room 
 
@@ -387,6 +382,7 @@ cd challange-blog-api
 
 - Email: lucasgomesmendes13@gmail.com
 - github: https://github.com/Glomes
+
 
 
 
